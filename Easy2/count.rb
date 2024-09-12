@@ -1,7 +1,8 @@
 # Define a #count method that returns the number of elements that return a truthy block value in an arbitrarily long list of arguments:
 
 def count(*args)
-  truthy_values = args.select { |value| yield value }
+  truthy_values = []
+  args.each { |value| truthy_values << value if yield value }
   truthy_values.length
 end
 
