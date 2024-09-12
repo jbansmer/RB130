@@ -1,7 +1,7 @@
 # Define a #max_by method that iterates through each element in a collection and returns the element with the largest value, as determined by the logic in a given block.
 
 def max_by(collection)
-  return nil if collection.empty?
+  # return nil if collection.empty?
   max = collection[0]
   collection.each do |ele|
     max = ele if yield(ele) > yield(max)
