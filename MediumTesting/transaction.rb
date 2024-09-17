@@ -1,5 +1,3 @@
-# transaction.rb
-
 class Transaction
   attr_reader :item_cost
   attr_accessor :amount_paid

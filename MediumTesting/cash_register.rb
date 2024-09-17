@@ -1,5 +1,3 @@
-# cash_register.rb
-
 class CashRegister
   attr_reader :total_money
 
