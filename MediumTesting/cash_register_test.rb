@@ -16,4 +16,10 @@ class CashRegisterTest < Minitest::Test
     transaction.amount_paid = 60
     assert_equal(10, cash_register.change(transaction))
   end
+
+  def test_give_receipt
+    cash_register = CashRegister.new(100)
+    transaction = Transaction.new(50)
+    assert_equal("You've paid $50.", "You've paid $#{transaction.item_cost}.")
+  end
 end
