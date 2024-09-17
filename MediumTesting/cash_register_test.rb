@@ -9,4 +9,11 @@ class CashRegisterTest < Minitest::Test
     transaction.amount_paid = 50
     assert_equal(150, cash_register.accept_money(transaction))
   end
+
+  def test_change
+    cash_register = CashRegister.new(100)
+    transaction = Transaction.new(50)
+    transaction.amount_paid = 60
+    assert_equal(10, cash_register.change(transaction))
+  end
 end
