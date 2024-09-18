@@ -27,5 +27,6 @@ class TextTest < Minitest::Test
 
   def teardown
     @sample_text.close
+    puts "#{@sample_text} file closed: #{@sample_text.closed?}"
   end
 end
