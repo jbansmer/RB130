@@ -3,7 +3,7 @@ require_relative 'text_swap_exercise'
 
 class TextTest < Minitest::Test
   def setup
-    @sample_text = File.open('./sample_text.txt', 'r')
+    @sample_text = File.open('sample_text.txt', 'r')
   end
 
   def test_swap
